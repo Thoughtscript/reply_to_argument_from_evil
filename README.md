@@ -4,7 +4,7 @@
 
 
 
-## Platinga's Free Will Defense
+## Plantinga's Free Will Defense
 
 
 
