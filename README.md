@@ -12,6 +12,10 @@
 
 
 
+### Contradictions and Disjoint Sets
+
+
+
 ### Predicate Extensions and Satisfaction
 
 
