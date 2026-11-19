@@ -44,7 +44,7 @@ C. There is no evil. (9)
 
 **Mackie's 1955** argument is presented as a seqeuence of **Propositions** (**Sentences**) with certain alleged formal characteristics: **Validity**, **Soundness**, etc. (E.g. - the **Syntactic View** above). Let's dub the above forumlation **[LPE 2008]**.
 
-Philosophers and logicians have then historically quibbled over these various  stipulated axioms/premises to show that the argument stands or falls. Significant progress in these narrow topics has typically accompanied the arrival of powerful new logical machinery.
+Philosophers and logicians have then historically quibbled over these various stipulated axioms/premises to show that the **Arugment** stands or falls. Significant progress in these narrow topics has typically accompanied the arrival of powerful new logical machinery.
 
 ## Plantinga's Free Will Defense
 
@@ -58,10 +58,6 @@ There are fairly straightforward relationships between **Modal (Kripke) Frames**
 A surprising lack of inter-faith and inter-field dialouge presently permeates the topic. Perhaps this is unsurprising.
 
 ### Cohen Forcing and Lifts
-
-
-
-### Contradictions and Disjoint Sets
 
 
 
@@ -83,6 +79,21 @@ Such that:
 Two other helpful **Definitions**:
 1. **Outright Contradiction** - a **Formal Proof** where some **Proposition** (or **Sentence**) `P ∧ ¬P` is derived for some **Proposition** (or **Sentence**) `P` in every **Structure** `S`.
 1. **Possible (Seeming) Contradiction** - a **Formal Proof** that's **Sound** or **Valid** where some **Proposition** (or **Sentence**) `P ∧ ¬S ∧ ¬(P ∧ ¬S)` is derived for some **Proposition** (or **Sentence**) `P` in some **Structure** `S` (but not necessarily all). E.g. - a "seeming" **Contradiction** that arises from the implicit or explicit **Structure** that's chosen to reason about `P ∧ ¬S` in.
+1. Call a **Structure** `S₁` with the following properties a **Resolution**:
+    * `S₀ ⊊ S₁`
+    * `S₀ ⊭ THₚ₀` 
+    * `S₁ ⊨ THₚ₁`
+    * `THₚ₀ = THₚ₁`
+
+> This insight confirms **Plantinga's** result that **[LPE 2008]** suffers from a fatal flaw: it doesn't substantively prove that **Complex Predicates** are **Outright Contradictions** nor that they *aren't merely* **Seeming Contradictions** **Resolved** under **Cohen Forcing** or **Lift** to parent **Models**/under a super **Class**.
+
+This holds outside of the machinery of **Modal Logic**.
+
+### Contradictions and Disjoint Sets
+
+1. For any **Contradiction** `C` 
+
+
 
 ### Meta-Schematic Argument
 
@@ -105,7 +116,7 @@ This should be considered a broad win for any theist (although it doesn't "prove
 
 ### Speaks 2008
 
-Critics of **[LPE 2008]** *need not** to deploy the following architecture for their view:
+Critics of **[LPE 2008]** *need not* to deploy the following architecture for their view:
 1. *N*-many moral **Predicates**.
 1. Which would also seem to necessitate an infinite number of so-called **Bridge Laws** linking each **Predicate** to each other. (A property of various **Theories** that's traditionally been considered a liability: e.g. - unnecessarily plenitudinous and/or profiligate.)
 
