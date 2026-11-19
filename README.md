@@ -8,7 +8,7 @@ The results here generally support the findings of **Leibowitz 1995**, **Plantin
 
 It can be shown that such notions are generally compatible with widely accepted proof- and model- theoretic techniques (which should be encouraging to critics of Mackie). 
 
-Perhaps helpfully, theologians (of all stripes) need not presuppose or rely upon ersatz **Moral Predicate Pluralism** (nor the "non-existence" of **Moral Predicates** - e.g. **Saeedimehr 2010** or **Semantic Nihilism** in Analytic or Anglo-American Philosophy).
+Perhaps helpfully, theologians (of all stripes) need not presuppose or rely upon ersatz **Moral Predicate Pluralism** (nor the "non-existence" of **Moral Predicates** - e.g. **Saeedimehr 2010** or **Semantic Nihilism** in Analytic or Anglo-American Philosophy). Importantly, the **Argument from Evil** (in its various formulations) have been run against almost *all* of the World's Major Religions (in particular order: Hinduism, Christianity, Islam, Confucianism, Judaism, Buddhism, etc.).
 
 > A.I. helped generate some Bibliographic, `LaTeX`, and `Lean` files. Used a combination of ChatGPT and GitHub Copilot. Many things were misidentified by A.I. including mischaracterizations of **Tarski–Vaught Extensions** but think it should be mostly correct at this point. My [own](https://github.com/Thoughtscript/latex_docker) LaTeX editor was used to generate [resolution.pdf](./_pdf/resolution.pdf)
 
@@ -51,7 +51,6 @@ Philosophers and logicians have then historically quibbled over these various st
 An **Argument** informed from **Modal Logic** showing that **[LPE 2008]** is **Invalid**. In **Modal (Kripke) Frame** terminology there are some **Possible Worlds** where one or more **Premises**/**Propositions** of the **Argument** might fail.
 
 There are fairly straightforward relationships between **Modal (Kripke) Frames** and more general **Model Classes** (**Satisfying** some Set of **Sentences**). (This should come as no great surprise since **Modal (Kripke) Frames** are **Models** associated by way of the **Accessibility Relation**. **Local Satisfiability** at some **Possible World** is typically defined as a specific Model-Theoretic **Structure** **Satisfying** some **Propositions**).
-
 
 ## Newerish Mathematics
 
@@ -120,9 +119,19 @@ We shall here take a predominantly *Meta-Schematic* approach to defend or attack
 
 An **Argument** `A` that is **Sound** and **Valid** in and **Satisfied** by a **Model** `M` might not be in some **Structure** `N` where `N ↪ M`. Two immediate takeaways: (a) this is consistent with there being some **Possible World** where **[LPE 2008]** fails - is either **Invalid** or **Unsound**; or (b) this is consistent with some **Models** having vacuously defined **Extensions**, etc.
 
-There are some further insights that go beyond the prior findings...
+There are some further insights that go beyond the prior findings. For example:
+1. Since any **Structure** `S` can be extended (in the various well-established ways described before) indefinitely, a conclusive Proof for the Non-Existence of God must be proved **Globally** across all **Models**, **Structures**.
+1. No such Argument or technique/method of **Arguments** exists to do this arbitrarily across all such Set Theoretic **Strcutures** (and Number Theoretic Induction doesn't apply here since the **Successor Function** isn't at play).
+1. Moreover, there are competing views on the way that we're to understand the overall hierarchy and arrangement of **Structures** to each other.
+    * The well-known debates surrounding `S4` and `S5` **Modal Logic** for example.
+    * Others like **Kit Fine's Specification Spaces** which specify the exact relations that hold between **Models**.
+    * Consider:
 
-We will show that this Structure entails that *all* **Arguments** with the following formal properties will likewise fail:
+        ![](_img/structure_topology.png)
+
+        Each "block" in the image above can be thought of as a **Structure** that **Satisfies** some **Proposition** (**Model**). And that depends on the underlying "topology" (if you will) of the universe (or "domain of discourse") at hand.
+
+As such, we will show that this Structure entails that *all* **Arguments** with the following formal properties will likewise fail:
 
 ...
 
@@ -170,3 +179,4 @@ In other words, that our human understanding of the divine is partly accurate, o
 1. https://philpapers.org/archive/HOWTLP-2.pdf
 1. https://eijh.modares.ac.ir/article_17698_c7f746b7939ba6db31093d4438d9207b.pdf
 1. https://logic.pku.edu.cn/ann_attachments/the%20outline%20of%20a%20new%20solution%20to%20the%20liar%20paradox134720412881.pdf
+1. https://semantics.uchicago.edu/kennedy/classes/s06/readings/fine75.pdf
