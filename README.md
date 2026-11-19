@@ -10,6 +10,8 @@ It can be shown that such notions are generally compatible with widely accepted 
 
 Perhaps helpfully, theologians (of all stripes) need not presuppose or rely upon ersatz **Moral Predicate Pluralism** (nor the "non-existence" of **Moral Predicates** - e.g. **Saeedimehr 2010** or **Semantic Nihilism** in Analytic or Anglo-American Philosophy).
 
+> A.I. helped generate some Bibliographic and `Lean` files.
+
 ## An Ancient Debate
 
 > "Mathematics is the language with which God has written the universe" - Galileo Galilei
@@ -65,7 +67,6 @@ A surprising lack of inter-faith and inter-field dialouge presently permeates th
 
 ### Predicate Extensions and Satisfaction
 
-
 A specific mathematical and formal property of interest:
 
 1. An **Extension** `P₀` for **Predicate** `P` used in the **WFF** of a **Theory** `THₚ₀` defined on **Structure** `S₀`.
@@ -79,6 +80,10 @@ Such that:
     * `S₀` has `6` of something so, `S₀ ⊭ THₚ₀`.
     * `S₁` has `7` of something so, `S₁ ⊨ THₚ₁`.
 
+Two other helpful **Definitions**:
+1. **Outright Contradiction** - a **Formal Proof** where some **Proposition** (or **Sentence**) `P ∧ ¬P` is derived for some **Proposition** (or **Sentence**) `P` in every **Structure** `S`.
+1. **Possible (Seeming) Contradiction** - a **Formal Proof** that's **Sound** or **Valid** where some **Proposition** (or **Sentence**) `P ∧ ¬S ∧ ¬(P ∧ ¬S)` is derived for some **Proposition** (or **Sentence**) `P` in some **Structure** `S` (but not necessarily all). E.g. - a "seeming" **Contradiction** that arises from the implicit or explicit **Structure** that's chosen to reason about `P ∧ ¬S` in.
+
 ### Meta-Schematic Argument
 
 We shall here take a predominantly *Meta-Schematic* approach to defend or attack a swathe of the logical space in the debate. We aim to "knock out" all permutations of a class of argument kinds.
@@ -91,15 +96,24 @@ We will show that this Structure entails that *all* **Arguments** with the follo
 
 ...
 
-
-
 ## Summary
 
 The **Meta-Schematic Approach** taken above is consistent with and broadly supports a wide-range of existing replies but offers some original insights and moves that can be made...
 
 This should be considered a broad win for any theist (although it doesn't "prove the existence of God").
 
-## God Beyond 'God'
+
+### Speaks 2008
+
+Critics of **[LPE 2008]** *need not** to deploy the following architecture for their view:
+1. *N*-many moral **Predicates**.
+1. Which would also seem to necessitate an infinite number of so-called **Bridge Laws** linking each **Predicate** to each other. (A property of various **Theories** that's traditionally been considered a liability: e.g. - unnecessarily plenitudinous and/or profiligate.)
+
+We offer the **Semantic Conception** approach as a viable alternative:
+1. Lexiographic Isomorphism of Formal **Theories** is a plausible criterion for linguistic identity (`THₚ₀ = THₚ₁`) reducing the need for *N*-many moral **Predicates** to one (and sans all the **Bridge Laws**).
+1. There are existing techniques to define a top-level **Predicate** using standard-fare presuppositions (such an approach is taken in [Zhao 2012](https://logic.pku.edu.cn/ann_attachments/the%20outline%20of%20a%20new%20solution%20to%20the%20liar%20paradox134720412881.pdf) within the **Liar Paradox** debates). Such an approach is broadly compatible with the techniques advanced above.
+
+### God Beyond 'God'
 
 Suprisingly, Hegelian in the following exact sense:
 
@@ -126,3 +140,4 @@ In other words, that our human understanding of the divine is partly accurate, o
 1. https://academicweb.nd.edu/~jspeaks/courses/2007-8/20229/_HANDOUTS/problem-of-evil.pdf
 1. https://philpapers.org/archive/HOWTLP-2.pdf
 1. https://eijh.modares.ac.ir/article_17698_c7f746b7939ba6db31093d4438d9207b.pdf
+1. https://logic.pku.edu.cn/ann_attachments/the%20outline%20of%20a%20new%20solution%20to%20the%20liar%20paradox134720412881.pdf
