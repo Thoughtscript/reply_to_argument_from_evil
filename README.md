@@ -10,7 +10,7 @@ It can be shown that such notions are generally compatible with widely accepted 
 
 Perhaps helpfully, theologians (of all stripes) need not presuppose or rely upon ersatz **Moral Predicate Pluralism** (nor the "non-existence" of **Moral Predicates** - e.g. **Saeedimehr 2010** or **Semantic Nihilism** in Analytic or Anglo-American Philosophy).
 
-> A.I. helped generate some Bibliographic and `Lean` files.
+> A.I. helped generate some Bibliographic, `LaTeX`, and `Lean` files. Used a combination of ChatGPT and GitHub Copilot. Many things were misidentified by A.I. including mischaracterizations of **Tarski–Vaught Extensions** but think it should be mostly correct at this point. My [own](https://github.com/Thoughtscript/latex_docker) LaTeX editor was used to generate [resolution.pdf](./_pdf/resolution.pdf)
 
 ## An Ancient Debate
 
@@ -63,10 +63,10 @@ A surprising lack of inter-faith and inter-field dialouge presently permeates th
 
 ### Predicate Extensions and Satisfaction
 
-A specific mathematical and formal property of interest:
+A specific mathematical and formal property of interest (where `↪` is a **Structure Preserving Embedding**):
 
 1. An **Extension** `P₀` for **Predicate** `P` used in the **WFF** of a **Theory** `THₚ₀` defined on **Structure** `S₀`.
-1. An **Extension** `P₁` for **Predicate** `P` used in the **WFF** of a **Theory** `THₚ₁` defined on a **Structure** `S₁` such that `P₀ ≠ P₁` and `S₀ ⊊ S₁`.
+1. An **Extension** `P₁` for **Predicate** `P` used in the **WFF** of a **Theory** `THₚ₁` defined on a **Structure** `S₁` such that `P₀ ≠ P₁` and `S₀ ↪ S₁`.
 
 Such that:
 1. `S₀ ⊭ THₚ₀` 
@@ -80,7 +80,7 @@ Two other helpful **Definitions**:
 1. **Outright Contradiction** - a **Formal Proof** where some **Proposition** (or **Sentence**) `P ∧ ¬P` is derived for some **Proposition** (or **Sentence**) `P` in every **Structure** `S`.
 1. **Possible (Seeming) Contradiction** - a **Formal Proof** that's **Sound** or **Valid** where some **Proposition** (or **Sentence**) `P ∧ ¬S ∧ ¬(P ∧ ¬S)` is derived for some **Proposition** (or **Sentence**) `P` in some **Structure** `S` (but not necessarily all). E.g. - a "seeming" **Contradiction** that arises from the implicit or explicit **Structure** that's chosen to reason about `P ∧ ¬S` in.
 1. Call a **Structure** `S₁` with the following properties a **Resolution**:
-    * `S₀ ⊊ S₁`
+    * `S₀ ↪ S₁`
     * `S₀ ⊭ THₚ₀` 
     * `S₁ ⊨ THₚ₁`
     * `THₚ₀ = THₚ₁`
@@ -99,7 +99,7 @@ This holds outside of the machinery of **Modal Logic**.
 
 We shall here take a predominantly *Meta-Schematic* approach to defend or attack a swathe of the logical space in the debate. We aim to "knock out" all permutations of a class of argument kinds.
 
-An **Argument** `A` that is **Sound** and **Valid** in and **Satisfied** by a **Model** `M` might not be in some **Structure** `N` where `N ⊆ M`. Two immediate takeaways: (a) this is consistent with there being some **Possible World** where **[LPE 2008]** fails - is either **Invalid** or **Unsound**; or (b) this is consistent with some **Models** having vacuously defined **Extensions**, etc.
+An **Argument** `A` that is **Sound** and **Valid** in and **Satisfied** by a **Model** `M` might not be in some **Structure** `N` where `N ↪ M`. Two immediate takeaways: (a) this is consistent with there being some **Possible World** where **[LPE 2008]** fails - is either **Invalid** or **Unsound**; or (b) this is consistent with some **Models** having vacuously defined **Extensions**, etc.
 
 There are some further insights that go beyond the prior findings...
 

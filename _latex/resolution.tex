@@ -1,0 +1,237 @@
+% Revised from the supplied resolution.tex; mathematical corrections incorporated.
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}[definition]{Theorem}
+\newtheorem{proposition}[definition]{Proposition}
+\newtheorem{corollary}[definition]{Corollary}
+\newtheorem{lemma}[definition]{Lemma}
+\newcommand{\Sat}{\models}
+\newcommand{\NSat}{\not\models}
+\newcommand{\Res}{\operatorname{Res}}
+\newcommand{\Emb}{\hookrightarrow}
+\newcommand{\card}[1]{\lvert #1\rvert}
+\title{Formal Specification of \textit{Resolution}}
+\author{Mathematical Logic Formalization}
+\date{}
+\begin{document}
+\maketitle
+\section{Core Definitions}
+\subsection{Logical Structures}
+Fix a first-order language $\mathcal L$, with equality. An $\mathcal L$-\textbf{structure} is a pair $\mathcal S=\langle U,I\rangle$, where $U$ is a nonempty domain and $I$ interprets every constant symbol as an element of $U$, every $n$-ary function symbol as a function $U^n\to U$, and every $n$-ary relation symbol as a subset of $U^n$. Logical connectives and quantifiers receive their usual semantics.
+\subsection{Predicates and Extensions}
+\begin{definition}[Predicate and predicate extension]
+For an $n$-ary relation symbol $R$ of $\mathcal L$, its \textbf{extension} in $\mathcal S$ is $R^{\mathcal S}\subseteq U^n$. The symbol $R$ and its formulas are syntactically fixed; the extension may depend on $\mathcal S$. In particular, a unary relation has extension $R^{\mathcal S}\subseteq U$.
+\end{definition}
+\begin{definition}[Structure embedding]
+An $\mathcal L$-\textbf{embedding} $f:\mathcal S_0\Emb\mathcal S_1$ is an injective map $f:U_0\to U_1$ preserving constants and functions and preserving \emph{and reflecting} relations: for every $n$-ary $R$ and $\bar a\in U_0^n$,
+\[
+\bar a\in R^{\mathcal S_0}\iff f(\bar a)\in R^{\mathcal S_1}.
+\]
+It is \textbf{proper} when $f[U_0]\subsetneq U_1$. Thus predicate extensions agree on the old domain under $f$, but may contain additional tuples in the larger structure. This is not an elementary embedding in general.
+\end{definition}
+\subsection{Satisfaction Relation}
+\begin{definition}[Satisfaction and non-satisfaction]
+A \textbf{theory} $T$ is a set of $\mathcal L$-sentences. Its satisfaction relation is
+\[
+\mathcal S\Sat T\iff \forall\varphi\in T,\ \mathcal S\Sat\varphi,
+\qquad
+\mathcal S\NSat T\iff \exists\varphi\in T,\ \mathcal S\NSat\varphi.
+\]
+For formulas with free variables, satisfaction additionally requires a variable assignment.
+\end{definition}
+\subsection{Syntactic Invariance}
+\begin{definition}[Identical theory]
+The language $\mathcal L$ and theory $T$ are held \textbf{literally identical} across all compared structures. No bijection between domains, syntactic renaming, or ``lexicographic isomorphism'' is required: $T_0=T_1=T$.
+\end{definition}
+\subsection{Structure Ordering}
+We write $f:\mathcal S_0\Emb\mathcal S_1$ for an embedding, and state properness separately as $f[U_0]\subsetneq U_1$. When the domains are literally nested and the interpretations restrict accordingly, $\mathcal S_0\subsetneq\mathcal S_1$ is also standard shorthand for a proper substructure.
+
+\section{Resolution: Formal Definition}
+\begin{definition}[Resolution property]
+For two $\mathcal L$-structures $\mathcal S_0,\mathcal S_1$ and the \emph{same} theory $T$, the \textbf{Resolution property holds} when
+\[
+\boxed{\Res_T(\mathcal S_0,\mathcal S_1)\iff
+\exists f:\mathcal S_0\Emb\mathcal S_1\ \bigl(
+ f[U_0]\subsetneq U_1\ \land\
+ \mathcal S_0\NSat T\ \land\
+ \mathcal S_1\Sat T\bigr).}
+\]
+The syntax and theory are invariant; the structure and its interpretations can change. The property is directional and does not assert that every proper extension changes satisfaction.
+\end{definition}
+\begin{theorem}[Seven-object example]
+Let $\mathcal L$ be the empty language with equality, and let $T=\{\varphi_7\}$, where $\varphi_7$ says ``there are exactly seven objects.'' The Resolution property holds for the six-element structure $\mathcal S_0$ and the seven-element structure $\mathcal S_1$ under the natural inclusion.
+\end{theorem}
+\begin{proof}
+Take $U_0=\{0,1,2,3,4,5\}$ and $U_1=\{0,1,2,3,4,5,6\}$. The inclusion is a proper $\mathcal L$-embedding (there are no nonlogical symbols to interpret). The fixed sentence can be written
+\[
+\varphi_7:=\exists x_1\cdots\exists x_7\left(
+\bigwedge_{1\le i<j\le7}x_i\ne x_j\ \land\
+\forall y\bigvee_{i=1}^7 y=x_i\right).
+\]
+Then $\mathcal S_0\NSat T$ and $\mathcal S_1\Sat T$, without changing $T$.
+\end{proof}
+
+\section{Contradiction Classification}
+\subsection{Outright Contradiction}
+\begin{definition}[Outright contradiction / unsatisfiability]
+A sentence $\varphi$ is \textbf{unsatisfiable} if $\forall\mathcal S,\ \mathcal S\NSat\varphi$; a theory $T$ is unsatisfiable if $\forall\mathcal S,\ \mathcal S\NSat T$. A sentence of the form $\psi\land\neg\psi$ is a canonical contradiction, but not every unsatisfiable formula is syntactically of that form. ``Outright contradiction'' here denotes semantic unsatisfiability.
+\end{definition}
+\subsection{Seeming (Possible) Contradiction}
+\begin{definition}[Seeming contradiction (terminology of this specification)]
+A theory $T$ has \textbf{model-dependent satisfaction} (called a ``seeming contradiction'' here) if
+\[
+(\exists\mathcal A,\ \mathcal A\NSat T)\ \land\
+(\exists\mathcal B,\ \mathcal B\Sat T).
+\]
+This is not a logical contradiction in standard terminology. The two structures need not be related by an embedding; Resolution adds that requirement.
+\end{definition}
+
+\section{Key Theorems}
+\subsection{Resolution and Seeming Contradictions}
+\begin{theorem}[Resolution implies model-dependent satisfaction]
+If $\Res_T(\mathcal S_0,\mathcal S_1)$ holds, then $T$ has model-dependent satisfaction and is not unsatisfiable.
+\end{theorem}
+\begin{proof}
+The two satisfaction statements in the definition give the required structures. In particular $\mathcal S_1\Sat T$, so $T$ is satisfiable.
+\end{proof}
+\subsection{Application to Mackie's Argument}
+\begin{proposition}[Conditional application]
+For any fixed first-order formalization $T_{\mathrm{evil}}$ of the relevant premises, if there exist structures $\mathcal S_0,\mathcal S_1$ with $\Res_{T_{\mathrm{evil}}}(\mathcal S_0,\mathcal S_1)$, then $T_{\mathrm{evil}}$ is satisfiable and therefore not an outright contradiction.
+\end{proposition}
+\begin{proof}
+Apply the preceding theorem to $T_{\mathrm{evil}}$.
+\end{proof}
+\noindent\textbf{Scope.} This conditional result does not construct the required structures for any particular formulation of Mackie's argument, establish Plantinga's defense, or show that forcing supplies such an extension. Those require separate substantive premises and proofs.
+\subsection{Structure-Dependent Satisfaction}
+\begin{theorem}[Satisfaction need not be preserved downward]
+There exist a proper embedding $f:\mathcal S_0\Emb\mathcal S_1$ and a fixed theory $T$ such that $\mathcal S_1\Sat T$ but $\mathcal S_0\NSat T$.
+\end{theorem}
+\begin{proof}
+Use the seven-object example. Logical validity of an inference must not be confused with satisfaction of a theory in a particular structure.
+\end{proof}
+
+\section{Semantic and Syntactic Consistency}
+\subsection{Syntactic Consistency}
+\begin{definition}[Syntactic consistency]
+In a fixed sound classical first-order deductive calculus, $T$ is \textbf{syntactically consistent} if there is no sentence $\varphi$ for which both $T\vdash\varphi$ and $T\vdash\neg\varphi$. Equivalently, $T\nvdash\bot$.
+\end{definition}
+\subsection{Semantic Consistency}
+\begin{definition}[Semantic consistency]
+A theory $T$ is \textbf{satisfiable} if $\exists\mathcal S,\ \mathcal S\Sat T$.
+\end{definition}
+\subsection{G\"odel's Completeness Theorem (Application)}
+\begin{theorem}[Soundness and completeness]
+For classical first-order logic, with the standard sound and complete proof system,
+\[
+T\text{ is syntactically consistent}\iff
+T\text{ has a model}.
+\]
+\end{theorem}
+
+\section{Advanced Model-Theoretic Results}
+\subsection{Preservation Theorems}
+\begin{theorem}[Existential preservation under embeddings]
+If $f:\mathcal S_0\Emb\mathcal S_1$ is an $\mathcal L$-embedding, then every existential sentence whose matrix is quantifier-free and true in $\mathcal S_0$ is true in $\mathcal S_1$.
+\end{theorem}
+\begin{proof}
+Transport the witnesses along $f$. Quantifier-free formulas are preserved and reflected under structure embeddings by induction on formulas.
+\end{proof}
+\begin{proposition}[Preservation and Resolution]
+If a fixed theory $T$ is downward reflected along every relevant embedding, i.e.
+\[
+\mathcal S_0\Emb\mathcal S_1\ \land\ \mathcal S_1\Sat T
+\ \Longrightarrow\ \mathcal S_0\Sat T,
+\]
+then the Resolution property cannot hold for $T$ along those embeddings. Upward preservation alone does not exclude Resolution.
+\end{proposition}
+\begin{proof}
+Downward reflection contradicts source non-satisfaction and target satisfaction. Upward preservation has antecedent $\mathcal S_0\Sat T$, which Resolution denies.
+\end{proof}
+\subsection{Herbrand's Theorem}
+\begin{theorem}[Herbrand's theorem: standard clausal form]
+Let $C$ be a set of first-order clauses, with the usual Herbrand construction (adjoining a fresh constant if needed). Then $C$ is unsatisfiable if and only if some \emph{finite} collection of ground instances of clauses from $C$ is propositionally unsatisfiable.
+\end{theorem}
+\noindent\textbf{Relationship to Resolution.} Herbrand's theorem provides a syntactic characterization of unsatisfiability for the relevant clausal form. It neither constructs a proper structure embedding nor changes the fixed theory. If Resolution holds for $T$, then $T$ is satisfiable, so no correct Herbrand refutation of an equivalent clausal presentation of $T$ can exist. Identical theories have identical derivations independently of Herbrand's theorem.
+\subsection{Tarski--Vaught Extensions}
+\begin{definition}[Elementary substructure]
+For $\mathcal S_0\subseteq\mathcal S_1$, write $\mathcal S_0\preccurlyeq\mathcal S_1$ if, for every first-order formula $\varphi(\bar x)$ and tuple $\bar a$ from $U_0$,
+\[
+\mathcal S_0\Sat\varphi(\bar a)\iff
+\mathcal S_1\Sat\varphi(\bar a).
+\]
+\end{definition}
+\begin{theorem}[Tarski--Vaught criterion]
+For a substructure $\mathcal S_0\subseteq\mathcal S_1$, the following are equivalent:
+\begin{enumerate}[label=(\roman*)]
+\item $\mathcal S_0\preccurlyeq\mathcal S_1$;
+\item for every formula $\psi(x,\bar a)$ with parameters $\bar a$ from $U_0$, if $\mathcal S_1\Sat\exists x\,\psi(x,\bar a)$, then there is $b\in U_0$ such that $\mathcal S_1\Sat\psi(b,\bar a)$.
+\end{enumerate}
+\end{theorem}
+\begin{proposition}[Tarski--Vaught and Resolution]
+If $\mathcal S_0\preccurlyeq\mathcal S_1$, the Resolution property does not hold for any fixed theory $T$. Conversely, if Resolution holds, the embedding is not elementary. Failure of the Tarski--Vaught criterion alone does not imply Resolution for a particular $T$.
+\end{proposition}
+\begin{proof}
+Elementary substructures agree on every sentence, hence on satisfaction of every theory. Resolution requires disagreement on satisfaction of $T$.
+\end{proof}
+
+\section{Cohen Forcing and Generic Extensions}
+\subsection{Forcing Posets}
+\begin{definition}[Forcing poset]
+A \textbf{forcing poset} $(\mathbb P,\leq)$ is a partially ordered set whose elements are conditions, conventionally with $q\leq p$ meaning that $q$ is stronger than $p$.
+\end{definition}
+\begin{definition}[Generic filter]
+A \textbf{filter} $G\subseteq\mathbb P$ is nonempty, upward closed with respect to the order $\leq$, and downward directed. Given a specified family $\mathcal D$ of dense subsets of $\mathbb P$, $G$ is $\mathcal D$-\textbf{generic} if $G\cap D\ne\varnothing$ for every $D\in\mathcal D$. In set-theoretic forcing over a transitive ground model $M$, genericity normally means meeting every dense subset of $\mathbb P$ belonging to $M$.
+\end{definition}
+\subsection{Generic Extensions via Lifting}
+\begin{theorem}[Forcing extensions: conditional setting]
+Under the usual set-theoretic hypotheses on a transitive ground model $M$, a forcing poset $\mathbb P\in M$, and an $M$-generic filter $G$, the generic extension $M[G]$ contains $M$ and satisfies the relevant forcing-extension results (including preservation of the axioms of ZFC when the ground model satisfies ZFC). Arbitrary first-order sentences need not retain their truth values.
+\end{theorem}
+\noindent\textbf{Relationship to Resolution.} For a fixed language and theory $T$, a forcing extension or a lifted structure satisfies the Resolution property \emph{only if} the relevant map is a proper $\mathcal L$-embedding and $M\NSat T$ while $M[G]\Sat T$ (or the corresponding lifted structures do). Forcing alone does not guarantee these conditions; some statements are absolute, others may change. In particular, there is no general theorem that an arbitrary false sentence can be made true by forcing.
+
+\section{L\"owenheim--Skolem Theorems}
+\subsection{Downward L\"owenheim--Skolem}
+\begin{theorem}[Downward L\"owenheim--Skolem]
+Let $\mathcal M$ be an infinite $\mathcal L$-structure and let $A\subseteq\card{\mathcal M}$. There is an elementary substructure $\mathcal N\preccurlyeq\mathcal M$ containing $A$ with
+\[
+\card{\mathcal N}\leq\max\{\aleph_0,\card{\mathcal L},\card{A}\}.
+\]
+In particular, a satisfiable theory in a countable language has a model of cardinality at most $\aleph_0$ (provided it has an infinite model, a countably infinite one).
+\end{theorem}
+\subsection{Upward L\"owenheim--Skolem}
+\begin{theorem}[Upward L\"owenheim--Skolem]
+If $\mathcal M$ is an infinite $\mathcal L$-structure and $\kappa$ is an infinite cardinal satisfying
+\[\kappa\geq\max\{\card{\mathcal M},\card{\mathcal L},\aleph_0\},\]
+then there is an elementary extension $\mathcal N\succcurlyeq\mathcal M$ of cardinality $\kappa$.
+\end{theorem}
+\subsection{Consequences for Resolution}
+\begin{proposition}[Elementarity and cardinality]
+Elementary submodels and elementary extensions furnished by L\"owenheim--Skolem cannot, by themselves, satisfy the Resolution property for a fixed theory $T$. The existence of a different model of $T$ at some cardinality does not imply the existence of a proper embedding from a specified source model that fails $T$.
+\end{proposition}
+\begin{proof}
+Elementarity preserves satisfaction of every sentence, hence of $T$. The embedding and source failure required by Resolution do not follow from cardinality information alone.
+\end{proof}
+\noindent\textbf{Spectrum qualification.} The assertion that every satisfiable first-order theory has models of every infinite cardinality is false: the seven-object theory has only seven-element models. The usual infinite-cardinality conclusions require an infinite model and the relevant language-cardinality bounds.
+
+\section{Verification: Resolution Satisfies Proof Conditions}
+\begin{proposition}[Resolution implies consistency]
+If $\Res_T(\mathcal S_0,\mathcal S_1)$ holds, then $T$ is semantically satisfiable and syntactically consistent in classical first-order logic.
+\end{proposition}
+\begin{proof}
+The target structure satisfies $T$. Soundness therefore excludes any formal derivation of a contradiction from $T$.
+\end{proof}
+\begin{proposition}[Syntactic invariance]
+For any sentence $\varphi$, the assertion $T\vdash\varphi$ is independent of which structure is used to evaluate $T$. The same proof calculus, language, axioms, and derivation remain fixed even when $\mathcal S_0\NSat T$ and $\mathcal S_1\Sat T$.
+\end{proposition}
+\begin{proof}
+A formal derivation is a finite syntactic sequence justified by axioms and inference rules; its definition does not refer to a selected model.
+\end{proof}
+
+\section{Conclusion}
+The \textbf{Resolution property} isolates a standard model-theoretic phenomenon: an unchanged theory is unsatisfied in one structure and satisfied in a proper structure-preserving extension. It separates \emph{semantic satisfaction} from \emph{syntactic identity}, and it is compatible with classical model theory. Preservation results constrain which changes are possible; elementary extensions exclude the property; Herbrand's theorem, forcing, and L\"owenheim--Skolem require their own hypotheses and do not automatically establish it. Applying Resolution to a specific philosophical argument requires a faithful formalization and an actual pair of structures satisfying the definition.
+\end{document}
