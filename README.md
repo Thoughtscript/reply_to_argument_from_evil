@@ -77,13 +77,15 @@ Such that:
 1. `THₚ₀` is lexiographically isomorphic to `THₚ₁` (`THₚ₀ = THₚ₁`).
 1. An example **Predicate** `P`: `"It's true there are 7 of something"`.
     * `S₀` has `6` of something so, `S₀ ⊭ THₚ₀`.
-    * `S₁` has `7` of something so, `S₁ ⊨ THₚ₁` .
+    * `S₁` has `7` of something so, `S₁ ⊨ THₚ₁`.
 
 ### Meta-Schematic Argument
 
 We shall here take a predominantly *Meta-Schematic* approach to defend or attack a swathe of the logical space in the debate. We aim to "knock out" all permutations of a class of argument kinds.
 
 An **Argument** `A` that is **Sound** and **Valid** in and **Satisfied** by a **Model** `M` might not be in some **Structure** `N` where `N ⊆ M`. Two immediate takeaways: (a) this is consistent with there being some **Possible World** where **[LPE 2008]** fails - is either **Invalid** or **Unsound**; or (b) this is consistent with some **Models** having vacuously defined **Extensions**, etc.
+
+There are some further insights that go beyond the prior findings...
 
 We will show that this Structure entails that *all* **Arguments** with the following formal properties will likewise fail:
 
