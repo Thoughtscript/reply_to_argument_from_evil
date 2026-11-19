@@ -57,9 +57,13 @@ There are fairly straightforward relationships between **Modal (Kripke) Frames**
 
 A surprising lack of inter-faith and inter-field dialouge presently permeates the topic. Perhaps this is unsurprising.
 
-### Cohen Forcing and Lifts
+Some well-known and interesting Mathematical **Theorems**, results:
 
-
+1. **Preservation Theorems**
+1. **Herbrand's Theorem**
+1. **Tarski-Vaught Extensions**
+1. **Cohen Forcing and Lifts**
+1. **Löwenheim-Skolem Theorems**
 
 ### Predicate Extensions and Satisfaction
 
@@ -85,15 +89,30 @@ Two other helpful **Definitions**:
     * `S₁ ⊨ THₚ₁`
     * `THₚ₀ = THₚ₁`
 
-> This insight confirms **Plantinga's** result that **[LPE 2008]** suffers from a fatal flaw: it doesn't substantively prove that **Complex Predicates** are **Outright Contradictions** nor that they *aren't merely* **Seeming Contradictions** **Resolved** under **Cohen Forcing** or **Lift** to parent **Models**/under a super **Class**.
+> This insight confirms **Plantinga's** result that **[LPE 2008]** suffers from a fatal flaw: it doesn't substantively prove that **Complex Predicates** are **Outright Contradictions** nor that they *aren't merely* **Seeming Contradictions** **Resolved** under **Cohen Forcing** or **Lift** to parent **Models**/under a super **Class**. (**Note**: This characterizes many philosophical debates.)
 
 This holds outside of the machinery of **Modal Logic**.
 
 ### Contradictions and Disjoint Sets
 
-1. For any **Contradiction** `C` 
+A second line of criticism focuses on the use of **Complex Predicates**:
 
+1. A historically common definition: a **Complex Predicate** `P` is defined as a a **Logical Equivalence** (through **Howard-Curry Isomorphism**) of a **Conjunction** or **Disjunction** of other **Predicates**: e.g. - `P(x) ↔ S(x) ∧ R(x) ∧ Q(x)` or `P(x) ↔ S(x) ∨ R(x) ∨ Q(x)` (familiarly found in **Multiple Realizability** debates).
+1. Many theologians have criticised **Mackie 1955** as presupposing hidden premises, **Propositional** lacunas, or Inferential Profile/Axiom Definition (characterizing **Predicates**) and the criticism here generally aligns with this kind of critique against **[LPE 2008]**.
 
+Consider the following **Complex Predicate**:
+1. `P(x) ↔ (S(x) ∧ R(x) ∧ Q(x))` - **Local** or **General Definition**
+    * One must substantially show that `P` is exhaustively characterized by `(S(x) ∧ R(x) ∧ Q(x))`. (**Note**: This characterizes many philosophical debates.)
+    * Given that the **Extensions** of `S`, `R`, `Q` can vary on. the **Structure** (per the above). One must show that the Inferential Profile/Axiom Definition holds not just a specific **Model** (but in all relevant ones).
+1. **Second-Order Realizability**
+    * Variant of the above, one must show that a **Definition** for a **Complex Predicate** isn't *merely* a **Disjunct**.
+    * I dislike importing the philosophical jargon term **Multiple Realizability** but I think it's fairly forward and familiar in this context. The idea being that multiple conditions can **Disjunctively Satisfy** the **Definition** for a (**Complex**) **Predicate** `P`. **Second-Order Realizability** involves precisely fixing the relevant **Disjunctions** - a trivial property I've called: [Exhaustive OR](https://www.thoughtscript.io/blog/000000000161).
+        * Rephrasing this formulation slightly: to prove conclusively that a **Complex Disjunctive Definition** is an **Exhaustive OR**.
+    * To be clear: this *is not* the Logical claim: `(p ↔ (q ∧ r)) → (p ↔ ((q ∧ r) ∨ z))` which **is not** a **Logical Tautology**.
+        * It'd be closer to: `¬(p ↔ (q ∧ r)) ∧ (p ↔ ((q ∧ r) ∨ z))` for some **Definition** of **Complex Predicate** `P`. (e.g. - the denial that the left-hand is correct in the first place.)
+1. All **Conjunctions** have **Disjunctive Logical Equivalences** in **Classical** (and **Nonclassical**) **Logic** so the above considerations are relevant to these discussions.
+
+> So, the upshot is that in lieu of such proves and **Definitions** we have no reason to accept that a particular **Complex Predicate Definition** holds **Locally**, **Globally**, or isn't **Resolved** (in the manner of **Resolution** defined above) in a *higher or lower* **Structure**. Again, this is why the **Argument** here is **Meta-Schematic** since.
 
 ### Meta-Schematic Argument
 
@@ -112,7 +131,6 @@ We will show that this Structure entails that *all* **Arguments** with the follo
 The **Meta-Schematic Approach** taken above is consistent with and broadly supports a wide-range of existing replies but offers some original insights and moves that can be made...
 
 This should be considered a broad win for any theist (although it doesn't "prove the existence of God").
-
 
 ### Speaks 2008
 
