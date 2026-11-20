@@ -174,6 +174,7 @@ Nearly every world religion and great work on the topic (from the [original blog
 * "In fact, it is widely admitted by almost all major religions that this is the case (e.g. that human limitations render such conceptions as admittedly crudely and inaccurately representational). 
 
    In other words, that our human understanding of the divine is partly accurate, often not, and incomplete - that some part of God is known or knowable and the rest not or impossible to understand."
+* …
 
 …
 
