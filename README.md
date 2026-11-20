@@ -167,13 +167,13 @@ Suprisingly, Hegelian in the following exact sense:
 
 It's also suprisingly Nietzchean in the following exact sense:
 
-1. `God` as a **Word** …
+1. `God` as a **Word** ...
 
 Nearly every world religion and great work on the topic (from the [original blog post](https://www.thoughtscript.io/blog/000000000097.html)):
 
-    "In fact, it is widely admitted by almost all major religions that this is the case (e.g. that human limitations render such conceptions as admittedly crudely and inaccurately representational).
+* "In fact, it is widely admitted by almost all major religions that this is the case (e.g. that human limitations render such conceptions as admittedly crudely and inaccurately representational). 
 
-    In other words, that our human understanding of the divine is partly accurate, often not, and incomplete - that some part of God is known or knowable and the rest not or impossible to understand."
+   In other words, that our human understanding of the divine is partly accurate, often not, and incomplete - that some part of God is known or knowable and the rest not or impossible to understand."
 
 …
 
