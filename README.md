@@ -8,7 +8,7 @@ The results here generally support the findings of **Leibowitz 1995**, **Plantin
 
 It can be shown that such notions are generally compatible with widely accepted proof- and model- theoretic techniques (which should be encouraging to critics of Mackie). 
 
-Perhaps helpfully, theologians (of all stripes) need not presuppose or rely upon ersatz **Moral Predicate Pluralism** (nor the "non-existence" of **Moral Predicates** - e.g. **Saeedimehr 2010** or **Semantic Nihilism** in Analytic or Anglo-American Philosophy). Importantly, the **Argument from Evil** (in its various formulations) have been run against almost *all* of the World's Major Religions (in particular order: Hinduism, Christianity, Islam, Confucianism, Judaism, Buddhism, etc.).
+Perhaps helpfully, theologians (of all stripes) need not presuppose or rely upon ersatz **Moral Predicate Pluralism** (nor the "non-existence" of **Moral Predicates** - e.g. **Saeedimehr 2010** or **Semantic Nihilism** in Analytic or Anglo-American Philosophy). Importantly, the **Argument from Evil** (in its various formulations) have been run against almost *all* of the World's Major Religions (in particular order: Hinduism, Christianity, Islam, Confucianism, Judaism, Buddhism, etc.). To be clear, many Atheists will also benefit from the approach taken here (e.g - later Nietzsche famously argued that the “Death of God” would undermine all normative activities including Natural Science and Political Governance).
 
 > A.I. helped generate some Bibliographic, `LaTeX`, and `Lean` files. Used a combination of ChatGPT and GitHub Copilot. Many things were misidentified by A.I. including mischaracterizations of **Tarski–Vaught Extensions** but think it should be mostly correct at this point. My [own](https://github.com/Thoughtscript/latex_docker) LaTeX editor was used to generate [resolution.pdf](./_pdf/resolution.pdf)
 
@@ -113,6 +113,10 @@ Consider the following **Complex Predicate**:
 
 > So, the upshot is that in lieu of such proves and **Definitions** we have no reason to accept that a particular **Complex Predicate Definition** holds **Locally**, **Globally**, or isn't **Resolved** (in the manner of **Resolution** defined above) in a *higher or lower* **Structure**. Again, this is why the **Argument** here is **Meta-Schematic** since.
 
+On the topic of **Predicate Extensions**:
+1. **Extension** of some **Predicate** is typically codefined with its **Anti-Extension** (or **Complement**, **Disjoint Set**).
+2. …
+
 ### Meta-Schematic Argument
 
 We shall here take a predominantly *Meta-Schematic* approach to defend or attack a swathe of the logical space in the debate. We aim to "knock out" all permutations of a class of argument kinds.
@@ -135,7 +139,7 @@ There are some further insights that go beyond the prior findings. For example:
 
 As such, we will show that this Structure entails that *all* **Arguments** with the following formal properties will likewise fail:
 
-...
+…
 
 ## Summary
 
@@ -157,11 +161,11 @@ We offer the **Semantic Conception** approach as a viable alternative:
 
 Suprisingly, Hegelian in the following exact sense:
 
-...
+…
 
 It's also suprisingly Nietzchean in the following exact sense:
 
-1. `God` as a **Word** ...
+1. `God` as a **Word** …
 
 Nearly every world religion and great work on the topic:
 
@@ -169,7 +173,7 @@ Nearly every world religion and great work on the topic:
 
 In other words, that our human understanding of the divine is partly accurate, often not, and incomplete - that some part of God is known or knowable and the rest not or impossible to understand."
 
-... 
+…
 
 ## Resources and Links
 
