@@ -124,12 +124,14 @@ There are some further insights that go beyond the prior findings. For example:
 1. No such Argument or technique/method of **Arguments** exists to do this arbitrarily across all such Set Theoretic **Strcutures** (and Number Theoretic Induction doesn't apply here since the **Successor Function** isn't at play).
 1. Moreover, there are competing views on the way that we're to understand the overall hierarchy and arrangement of **Structures** to each other.
     * The well-known debates surrounding `S4` and `S5` **Modal Logic** for example.
-    * Others like **Kit Fine's Specification Spaces** which specify the exact relations that hold between **Models**.
+    * Others like **Kit Fine's 1975 Specification Spaces** which specify the exact relations that hold between **Models**.
     * Consider:
 
         ![](_img/structure_topology.png)
 
-        Each "block" in the image above can be thought of as a **Structure** that **Satisfies** some **Proposition** (**Model**). And that depends on the underlying "topology" (if you will) of the universe (or "domain of discourse") at hand.
+        Each "block" or "circle" in the image above can be thought of as a **Structure** that **Satisfies** some **Proposition** (**Model**). And that depends on the underlying "topology" (if you will) of the universe (or "domain of discourse") at hand. There's no guarantee that one can Prove that some **Proposition** will hold across **Induction** from some arbitrary **Local** position in the **Global Topology**.
+1. Therefore, **Arguments** like **[LPE 2008]** cannot guarantee that they meet this basic **Soundness** criterion without first affixing the background "theory landscape" (**Global Topology**) and mapping out all the relationships between **Extensions**, **Structures**, **Predicates**, and **Models**.
+1. And, given the concerns above surrounding the correct **Inferential Profiles** for **Complex Predicates** (in even trivial **Model Extensions/Embeddings** much less *all of them*) this should cast serious doubt on all **Arguments** schematic akin to **[LPE 2008]**. (This is itself a perhaps familiar style of reply since it mirrors sophisticated arguments in Philosophical Skepticism and Formal Epistemology debates.)
 
 As such, we will show that this Structure entails that *all* **Arguments** with the following formal properties will likewise fail:
 
