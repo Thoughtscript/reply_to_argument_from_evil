@@ -167,7 +167,7 @@ Suprisingly, Hegelian in the following exact sense:
 
 It's also suprisingly Nietzchean in the following exact sense:
 
-1. `God` as a **Word** ...
+1. `God` as a **Word** …
 
 Nearly every world religion and great work on the topic (from the [original blog post](https://www.thoughtscript.io/blog/000000000097.html)):
 
