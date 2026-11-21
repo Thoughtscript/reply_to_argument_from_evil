@@ -136,6 +136,7 @@ There are some further insights that go beyond the prior findings. For example:
         ![](_img/structure_topology.png)
 
         Each "block" or "circle" in the image above can be thought of as a **Structure** that **Satisfies** some **Proposition** (**Model**). And that depends on the underlying "topology" (if you will) of the universe (or "domain of discourse") at hand. There's no guarantee that one can Prove that some **Proposition** will hold across **Induction** from some arbitrary **Local** position in the **Global Topology**.
+    * These observations also pose a challenge to the task of defining "leveled" Moral Predicates (an ascending hierarchy of one sort or another). 
 1. Therefore, **Arguments** like **[LPE 2008]** cannot guarantee that they meet this basic **Soundness** criterion without first affixing the background "theory landscape" (**Global Topology**) and mapping out all the relationships between **Extensions**, **Structures**, **Predicates**, and **Models**.
 1. And, given the concerns above surrounding the correct **Inferential Profiles** for **Complex Predicates** (in even trivial **Model Extensions/Embeddings** much less *all of them*) this should cast serious doubt on all **Arguments** schematic akin to **[LPE 2008]**. (This is itself a perhaps familiar style of reply since it mirrors sophisticated arguments in Philosophical Skepticism and Formal Epistemology debates.)
 
@@ -158,6 +159,8 @@ Critics of **[LPE 2008]** *need not* to deploy the following architecture for th
 We offer the **Semantic Conception** approach as a viable alternative:
 1. Lexiographic Isomorphism of Formal **Theories** is a plausible criterion for linguistic identity (`THₚ₀ = THₚ₁`) reducing the need for *N*-many moral **Predicates** to one (and sans all the **Bridge Laws**).
 1. There are existing techniques to define a top-level **Predicate** using standard-fare presuppositions (such an approach is taken in [Zhao 2012](https://logic.pku.edu.cn/ann_attachments/the%20outline%20of%20a%20new%20solution%20to%20the%20liar%20paradox134720412881.pdf) within the **Liar Paradox** debates). Such an approach is broadly compatible with the techniques advanced above.
+
+One can employ **Theory Resolution** without committing to any specific hierarchy of Moral Predicates (although its compatible with those approaches as well).
 
 ### God Beyond 'God'
 
